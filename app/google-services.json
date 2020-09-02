@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "223127207561",
+    "firebase_url": "https://mootty-5f053.firebaseio.com",
+    "project_id": "mootty-5f053",
+    "storage_bucket": "mootty-5f053.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223127207561:android:8842ba3965ff2d40339058",
+        "android_client_info": {
+          "package_name": "com.humo.mootty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223127207561-0rdhvilu45ibfjal2cp44m96iegedm3p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxxwV4EQhgODgmQKrurtXBqo7QmqZdcFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "223127207561-0rdhvilu45ibfjal2cp44m96iegedm3p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

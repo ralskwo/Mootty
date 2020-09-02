@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.humo.mootty.ui.auth.AuthViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_two"
+        android:orientation="vertical"
+        tools:context=".ui.auth.SignUpActivity"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/signupLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/app_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="73dp"
+                android:lineSpacingExtra="6sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_mootty_outline" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/app_title">
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:mtf_image="@drawable/ic_email_black_24dp"
+                    app:mtf_labelColor="#666">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:id="@+id/text_email"
+                        android:text="@={viewmodel.email}"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+
+                <TextView
+                    android:id="@+id/tv_check_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    app:mtf_image="@drawable/ic_vpn_key_black_24dp"
+                    app:mtf_labelColor="#666">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password_kor"
+                        android:inputType="textPassword"
+                        android:id="@+id/edit_text_password"
+                        android:text="@={viewmodel.password}"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+                <com.github.florent37.materialtextfield.MaterialTextField
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    app:mtf_image="@drawable/ic_vpn_key_black_24dp"
+                    app:mtf_labelColor="#666">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password_check"
+                        android:inputType="textPassword"
+                        android:id="@+id/edit_text_ck_password"
+                        android:text="@={viewmodel.ck_password}"
+                        android:textColor="#333"
+                        android:textSize="15sp" />
+
+                </com.github.florent37.materialtextfield.MaterialTextField>
+
+                <TextView
+                    android:id="@+id/tv_check_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <com.marozzi.roundbutton.RoundButton
+                android:id="@+id/button_sign_up"
+                android:onClick="@{() -> viewmodel.signup()}"
+                style="@style/TextStyle194"
+                android:layout_width="88dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="@string/btn_sign_up"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                app:rb_animation_alpha="true"
+                app:rb_animation_corner_radius="20dp"
+                app:rb_animation_duration="500"
+                app:rb_animation_inner_resource_color="@color/green"
+                app:rb_animation_progress_color="@color/colorAccent2"
+                app:rb_animation_progress_padding="3dp"
+                app:rb_animation_progress_width="2dp"
+                app:rb_background_color="@color/warm_grey_three"
+                app:rb_background_color_pressed="@color/white"
+                app:rb_corner_color="@color/white"
+                app:rb_corner_color_pressed="@color/white"
+                app:rb_corner_radius="20dp"
+                app:rb_corner_width="1dp"
+                app:rb_text_color="@color/white"
+                app:rb_text_color_pressed="@android:color/white" />
+
+            <TextView
+                android:id="@+id/text_view_register"
+                android:layout_width="wrap_content"
+                android:onClick="@{(v) -> viewmodel.goToLogin(v)}"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_sign_up" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</layout>
