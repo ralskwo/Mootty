@@ -1,4 +1,4 @@
-package com.humo.mootty.ui.view.activity
+package com.humo.mootty.ui.home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -6,9 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.humo.mootty.R
 import com.humo.mootty.databinding.ActivityHomeBinding
-import com.humo.mootty.ui.view.fragment.MainFragment
-import com.humo.mootty.ui.viewmodels.HomeViewModel
-import com.humo.mootty.ui.viewmodels.HomeViewModelFactory
+import com.humo.mootty.ui.main.MainFragment
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
 import org.kodein.di.generic.instance

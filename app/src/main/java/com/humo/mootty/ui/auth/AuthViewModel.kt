@@ -15,7 +15,7 @@ class AuthViewModel(
     //email and password for the input
     var email: String? = null
     var password: String? = null
-    var ck_password: String? = null
+    var ckPassword: String? = null
 
     //auth listener
     var authListener: AuthListener? = null
@@ -56,7 +56,7 @@ class AuthViewModel(
 
     //Doing same thing with signup
     fun signup() {
-        if (ck_password != password) {
+        if (ckPassword != password) {
             authListener?.onFailure("Please Check Password")
             return
         }

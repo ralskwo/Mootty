@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import com.humo.mootty.R
 import com.humo.mootty.databinding.ActivitySignUpBinding
-import com.humo.mootty.ui.view.activity.HomeActivity
+import com.humo.mootty.ui.home.HomeActivity
 import com.humo.mootty.utils.startHomeActivity
 import com.marozzi.roundbutton.RoundButton
 import kotlinx.android.synthetic.main.activity_sign_up.*
@@ -31,20 +31,6 @@ class SignUpActivity() : AppCompatActivity(), AuthListener, KodeinAware {
         viewModel = ViewModelProviders.of(this, factory).get(AuthViewModel::class.java)
         binding.viewmodel = viewModel
         viewModel.authListener = this
-
-
-//        btn_sign_up.setOnClickListener {
-//            if (btn_sign_up.isAnimating) {
-//                btn_sign_up.setResultState(RoundButton.ResultState.FAILURE)
-//            } else {
-//                btn_sign_up.startAnimation()
-//                btn_sign_up.postDelayed({ btn_sign_up.revertAnimation() }, 3000)
-//            }
-//
-//            val intent = Intent(this@SignUpActivity, MainActivity::class.java)
-//            startActivity(intent)
-//
-//        }
     }
 
     override fun onStarted() {

@@ -1,4 +1,4 @@
-package com.humo.mootty.ui.view.fragment
+package com.humo.mootty.ui.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,9 +9,7 @@ import com.humo.mootty.R
 
 class MainFragment : Fragment() {
 
-//    private val viewModel: MainViewModel by viewModels(
-//        factoryProducer = {SavedStateViewModelFactory(this)}
-//    )
+    private lateinit var viewModel: MainViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -20,11 +18,10 @@ class MainFragment : Fragment() {
         return inflater.inflate(R.layout.main_fragment, container, false)
     }
 
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//        viewModel.text.observe(viewLifecycleOwner){
-//            //Update UI
-//        }
-//    }
+    //Create and bind to ViewModel
+    override fun onStart() {
+        super.onStart()
+    }
+
 
 }

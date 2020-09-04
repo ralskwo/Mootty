@@ -4,7 +4,7 @@ import android.app.Application
 import com.humo.mootty.data.firebase.FirebaseSource
 import com.humo.mootty.data.repositories.UserRepository
 import com.humo.mootty.ui.auth.AuthViewModelFactory
-import com.humo.mootty.ui.viewmodels.HomeViewModelFactory
+import com.humo.mootty.ui.home.HomeViewModelFactory
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.androidXModule

@@ -105,7 +105,7 @@
                         android:hint="@string/password_check"
                         android:inputType="textPassword"
                         android:id="@+id/edit_text_ck_password"
-                        android:text="@={viewmodel.ck_password}"
+                        android:text="@={viewmodel.ckPassword}"
                         android:textColor="#333"
                         android:textSize="15sp" />
 

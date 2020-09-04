@@ -1,4 +1,4 @@
-package com.humo.mootty.ui.viewmodels
+package com.humo.mootty.ui.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

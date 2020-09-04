@@ -3,7 +3,7 @@ package com.humo.mootty.utils
 import android.content.Context
 import android.content.Intent
 import com.humo.mootty.ui.auth.LoginActivity
-import com.humo.mootty.ui.view.activity.HomeActivity
+import com.humo.mootty.ui.home.HomeActivity
 
 fun Context.startHomeActivity() =
     Intent(this, HomeActivity::class.java).also {
